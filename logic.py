@@ -1,5 +1,7 @@
 import telegram
+from konlpy.tag import Mecab
 from telegram.ext import Updater, MessageHandler, Filters
+
 #from emoji import emojize
 
 # api_key, bot, chat_id setting
@@ -22,10 +24,13 @@ anjgo = ['뭐해', '모해', '머해', '모행', '머행', '뭐행', 'ㅁㅎ'] #
 def mohae():
     alswnReq.append('너생각')
 
+# mecab 선언
+mecab = Mecab()
 # logic
 def handler(update, context):
     text = update.message.text
-
+    MecabText = mecab.pos(text)
+    print(MecabText)
 
     # 미래형
 
