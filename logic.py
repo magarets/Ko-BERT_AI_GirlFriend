@@ -1,4 +1,5 @@
 import telegram
+#import pymysql
 from konlpy.tag import Mecab
 from telegram.ext import Updater, MessageHandler, Filters
 
