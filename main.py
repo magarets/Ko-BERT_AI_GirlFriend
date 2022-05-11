@@ -1,5 +1,5 @@
 import telegram
-import logic
+import chatbotLogic
 from konlpy.tag import Mecab
 from telegram.ext import Updater, MessageHandler, Filters
 
