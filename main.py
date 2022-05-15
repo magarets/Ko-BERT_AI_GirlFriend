@@ -16,7 +16,6 @@ updater = Updater(token='5333196879:AAHyqMVrtXCS3DDQhnjVpgVrDf_GX5NxJ3Q')
 dispatcher = updater.dispatcher
 updater.start_polling()
 
-
 ''' 선언 '''
 # queue 선언
 q = queue.Queue
