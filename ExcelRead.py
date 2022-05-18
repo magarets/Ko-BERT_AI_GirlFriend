@@ -14,6 +14,7 @@ def compareWord(a_str, b_str):
 
 
 # 데이터 읽어오기
+df_minju = pd.read_excel('/Users/itsjustyuwon/Desktop/Desktop/desktop/opensource/Telegram_GF/data/Minju_word_data.xlsx', usecols=[3], skiprows=[1])
 df_user = pd.read_excel('/Users/itsjustyuwon/Desktop/Desktop/desktop/opensource/Telegram_GF/data/Minju_word_data.xlsx', usecols=[2], skiprows=[1])
 df_sinario = pd.read_excel('/Users/itsjustyuwon/Desktop/Desktop/desktop/opensource/Telegram_GF/data/Minju_word_data.xlsx', usecols=[1], skiprows=[1])
 
@@ -25,8 +26,10 @@ df_user = df_user.astype('str')
 
 # 문자열로 바꾼 사용자 발화를 리스트로 변환
 userDataList = df_user.values.tolist()
-# 사나리오 데이터를 리스트로 변환
+# 시나리오 데이터를 리스트로 변환
 sinarioDataList = df_sinario.values.tolist()
+# 민주의 데이터를 리스트로 변환
+minjuDataList = df_minju.values.tolist()
 
 # 사용자 입력받고, 공백제거
 userInput = input("input : ")
@@ -43,13 +46,15 @@ for index, data in enumerate(userDataList):
 
 #    print(compareData, " ")
 
-    ''' 사용자 입력과 데이터의 일치율 비교문 '''
+    ''' 사용자 입력과 데이터의 일치율 비교 '''
     # 두 개의 문자열의 일치율을 구하기
     match_rate = float(compareWord(userInput, compareData))
 
     if(match_rate > ld):
-        print(f"{index} {userInput}, {compareData} => {match_rate}")
+        print(f"{index} {userInput}, {compareData} => {match_rate}%")
         print(f"시나리오 : {sinarioDataList[index]}")
+
+
 
 '''
 wb = openpyxl.Workbook()
