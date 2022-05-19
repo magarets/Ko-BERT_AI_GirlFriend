@@ -1,7 +1,7 @@
 from konlpy.tag import Mecab
 
 mecab = Mecab()
-data = mecab.pos("너오늘뭐해?")
+data = mecab.pos("지금 뭐해?")
 
 for dataList in data:
     print(dataList)
