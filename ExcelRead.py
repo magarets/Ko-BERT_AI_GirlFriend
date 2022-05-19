@@ -3,14 +3,29 @@ import string
 import openpyxl
 import operator
 
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
 from difflib import SequenceMatcher
 
-# 사용자 입력과 시나리오 데이터의 일치율 분석
+'''
+model = SentenceTransformer('jhgan/ko-sroberta-multitask')
+
+sentence = ["안녕하세요?", "한국어 문장 임베딩을 위한 버트모델입니다."]
+embeddings = model.encode(sentence)
+
+print(embeddings)
+''' # Sentence BERT 모델 벡터화
+
+
+# 사용자 입력과 시나리오 데이터의 일치율 분석 
 def compareWord(a_str, b_str):
     SequenceMatcher(None, a_str, b_str).ratio()
     match_rate = f'{SequenceMatcher(None, a_str, b_str).ratio() * 100:.1f}'
     return match_rate
 
+userChatLog = [] # 사용자의 최대 3회의 채팅로그를 저장하는 리스트
+minjuChatLog = [] # 인공지능의 채팅로그
+Loop = 3 # 최대 n 번의 대화시나리오를 생성
 
 
 # 데이터 읽어오기
@@ -37,7 +52,10 @@ userInput = ''.join(userInput)
 userInput = userInput.replace(" ", "")
 
 # 학습 데이터 일치율 %
+# 80 이상이 적당한듯? 70은 다른시나리오에서도 검색됨
 ld = 80
+
+''' start '''
 
 # 사용자 발화문 리스트에서 형태소 추출 후, 사용자 입력 데이터와 비교해서 시나리오 찾기
 for index, data in enumerate(userDataList):

@@ -1,7 +1,7 @@
 import pymysql
 import pandas as pd
 
-DB = 'Customer'
+DB = 'SELL'
 
 conn = pymysql.connect(
     host='127.0.0.1',
@@ -11,8 +11,8 @@ conn = pymysql.connect(
     charset='utf8'
 )
 cur = conn.cursor()
-#sql = 'select * from Customer'
-sql = ''
+sql = 'select * from Customer'
+sql = 'SELECT * FROM Customer'
 while(sql != 'stop'):
     sql = input("SQL : ")
     cur.execute(sql)
