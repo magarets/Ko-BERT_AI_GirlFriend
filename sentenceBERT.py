@@ -27,25 +27,27 @@ df = pd.read_excel('/Users/itsjustyuwon/Desktop/Desktop/desktop/opensource/Teleg
 # 모델 불러오기
 model = AutoTokenizer.from_pretrained("beomi/KcELECTRA-base")
 
-ls = 0.9
-text = '안하는게 나을까?'
+ls = 0.95
+text = '많이 배고파?'
 
 # 텍스트 벡터화
 embedding = model.encode(text)
 for i in range(150 - len(embedding)):
     embedding.append(0)
 
+max = 0
 for index, data in enumerate(df['Embedding']):
     # str 2 list
     myList_a = data.split(',')
     myList = list(map(int, myList_a))
+    score = dot(embedding, myList) / (norm(embedding) * norm(myList))
+    if( score > ls):
+        if( max < score ):
+            max = score
+            point = index
 
-    if( dot(embedding, myList) / (norm(embedding) * norm(myList)) > ls):
-        print(df.loc[index, 'Sentence'])
-    print(dot(embedding, myList) / (norm(embedding) * norm(myList))) # compute similarity between sentence vectors
+print(f"{max}, {df.loc[point, 'Sentence']}")
 
-    if index > 50:
-        break
 '''
 
 #print(dot(embedding, embedding2) / (norm(embedding) * norm(embedding2)))
