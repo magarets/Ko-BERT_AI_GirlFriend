@@ -1,5 +1,8 @@
 # Telegram_GirlFriend
 
+![image](https://user-images.githubusercontent.com/101767824/170328050-f61afba7-361b-40bc-b17b-e0e16435fa15.png)
+마치 실제 여자친구와 대화하는 느낌을 주는 인공지능 모델
+
 MIT License
 
 Copyright (c) 2017 gwiazdorrr
