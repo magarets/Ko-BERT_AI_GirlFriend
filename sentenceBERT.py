@@ -27,26 +27,36 @@ df = pd.read_excel('/Users/itsjustyuwon/Desktop/Desktop/desktop/opensource/Teleg
 # 모델 불러오기
 model = AutoTokenizer.from_pretrained("beomi/KcELECTRA-base")
 
-ls = 0.95
-text = '많이 배고파?'
-
+ls = 0.90
+text = '창 밖을 보는 고양이'
+text2 = '창 밖을 보는 강아지'
 # 텍스트 벡터화
 embedding = model.encode(text)
+embedding2 = model.encode(text2)
+
+print(f'score: {dot(embedding, embedding2) / (norm(embedding) * norm(embedding2))}')
+'''
 for i in range(150 - len(embedding)):
     embedding.append(0)
+'''
 
+'''
+# 전체 데이터에서 일치율 구하기
 max = 0
 for index, data in enumerate(df['Embedding']):
     # str 2 list
     myList_a = data.split(',')
     myList = list(map(int, myList_a))
     score = dot(embedding, myList) / (norm(embedding) * norm(myList))
-    if( score > ls):
+
+    if(score > ls):
         if( max < score ):
             max = score
             point = index
 
-print(f"{max}, {df.loc[point, 'Sentence']}")
+
+print("test score")
+print(f"{max}, {df.loc[point, 'Sentence']}, {df.loc[point, 'Emotion']}")
 
 '''
 
@@ -60,4 +70,3 @@ print(f"{max}, {df.loc[point, 'Sentence']}")
 
 # 시퀀스 투 벡터 데이터베이스 저장
 #df.to_csv('/Users/itsjustyuwon/Desktop/Desktop/desktop/opensource/Telegram_GF/data/traindata.csv', index=False)
-'''
