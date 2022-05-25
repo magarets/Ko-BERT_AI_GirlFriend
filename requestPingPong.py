@@ -1,5 +1,5 @@
 ## start chatting ##
-# 디스코드 봇 토큰 : OTc4NjQ3NzkyODExNjQyOTcw.GIPLDG.9cCmzgQk2br6xDQbApB-1E0GNsg7t2gDXlUbaw
+# 디스코드 봇 토큰 : 
 import re
 import random
 import PingPongWr
@@ -29,9 +29,9 @@ score = 0.7
 bot = commands.Bot(command_prefix='>')
 
 #  ping-pong setting
-sessionID = 'frQrxsyFTIOYHtyebPxwTK+U7anJuLrZgw13PDWa9q2pw4FPKkRFaHubQaOVbJQLCpVK3Av4a0v9wyn/M5bz+g=='
-url = "https://builder.pingpong.us/api/builder/627c7214e4b0d7787e92b6fe/integration/v0.2/custom/" + 'sessionid'  # 핑퐁빌더 Custom API URL
-pingpong_token = "Basic a2V5OjQ0ZDdjN2ZmYTJkYTFmNTA2Zjg4ODhlMjEyYzk3MDg3"  # 핑퐁빌더 Custom API Token
+sessionID = ''
+url = "" + 'sessionid'  # 핑퐁빌더 Custom API URL
+pingpong_token = ""  # 핑퐁빌더 Custom API Token
 
 Ping = PingPongWr.Connect(url, pingpong_token)  # 핑퐁 모듈 클래스 선언
 text = 'abcedfghijklmn'
@@ -115,4 +115,4 @@ async def on_message(message):
 
 print('start')
 # discord bot's token
-bot.run('OTc4NjQ3NzkyODExNjQyOTcw.GIPLDG.9cCmzgQk2br6xDQbApB-1E0GNsg7t2gDXlUbaw')
+bot.run('')
