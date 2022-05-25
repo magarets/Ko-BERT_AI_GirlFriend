@@ -7,18 +7,18 @@ from PingPongTool import PingPong  # 핑퐁툴 모듈 임포트
 #from emoji import emojize
 
 # api_key, bot, chat_id setting
-api_key = '5333196879:AAHyqMVrtXCS3DDQhnjVpgVrDf_GX5NxJ3Q' # minju's api_key
+api_key = '' # minju's api_key
 bot = telegram.Bot(token=api_key)
-chat_id = 5385808815
+chat_id = 
 
 # updater
-updater = Updater(token='5333196879:AAHyqMVrtXCS3DDQhnjVpgVrDf_GX5NxJ3Q')
+updater = Updater(token='5')
 dispatcher = updater.dispatcher
 updater.start_polling()
 
 # 핑퐁 api 설정
-URL = "https://builder.pingpong.us/api/builder/627c7214e4b0d7787e92b6fe/integration/v0.2/custom/{sessionId}"  # 핑퐁 커스텀 API 사이트에서 링크
-Authorization = "Basic a2V5OjQ0ZDdjN2ZmYTJkYTFmNTA2Zjg4ODhlMjEyYzk3MDg3"  # 핑퐁 커스텀 API 사이트에서 인증 토큰
+URL = ""  # 핑퐁 커스텀 API 사이트에서 링크
+Authorization = ""  # 핑퐁 커스텀 API 사이트에서 인증 토큰
 
 # 핑퐁 클래스 선언
 Ping = PingPong(URL, Authorization)
@@ -78,18 +78,18 @@ from PingPongTool import PingPong  # 핑퐁툴 모듈 임포트
 #from emoji import emojize
 
 # api_key, bot, chat_id setting
-api_key = '5333196879:AAHyqMVrtXCS3DDQhnjVpgVrDf_GX5NxJ3Q' # minju's api_key
+api_key = '' # minju's api_key
 bot = telegram.Bot(token=api_key)
-chat_id = 5385808815
+chat_id = 
 
 # updater
-updater = Updater(token='5333196879:AAHyqMVrtXCS3DDQhnjVpgVrDf_GX5NxJ3Q')
+updater = Updater(token='')
 dispatcher = updater.dispatcher
 updater.start_polling()
 
 # 핑퐁 api 설정
-URL = "https://builder.pingpong.us/api/builder/627c7214e4b0d7787e92b6fe/integration/v0.2/custom/{sessionId}"  # 핑퐁 커스텀 API 사이트에서 링크
-Authorization = "Basic a2V5OjQ0ZDdjN2ZmYTJkYTFmNTA2Zjg4ODhlMjEyYzk3MDg3"  # 핑퐁 커스텀 API 사이트에서 인증 토큰
+URL = ""  # 핑퐁 커스텀 API 사이트에서 링크
+Authorization = ""  # 핑퐁 커스텀 API 사이트에서 인증 토큰
 
 # 핑퐁 클래스 선언
 Ping = PingPong(URL, Authorization)
