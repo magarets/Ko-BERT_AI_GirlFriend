@@ -5,18 +5,18 @@ from telegram.ext import Updater, MessageHandler, Filters
 from PingPongTool import PingPong  # 핑퐁툴 모듈 임포트
 
 # telegram api_key, bot, chat_id setting
-api_key = '5333196879:AAHyqMVrtXCS3DDQhnjVpgVrDf_GX5NxJ3Q' # minju's api_key
+api_key = '' # minju's api_key
 bot = telegram.Bot(token=api_key)
-chat_id = 5385808815
+chat_id = 
 
 # telegram updater
-updater = Updater(token='5333196879:AAHyqMVrtXCS3DDQhnjVpgVrDf_GX5NxJ3Q')
+updater = Updater(token='')
 dispatcher = updater.dispatcher
 updater.start_polling()
 
 # URL, Token 생성
-url = "https://builder.pingpong.us/api/builder/627c7214e4b0d7787e92b6fe/integration/v0.2/custom/{sessionId}"  # 핑퐁 커스텀 API 사이트에서 링크
-Authorization = "Basic a2V5OjQ0ZDdjN2ZmYTJkYTFmNTA2Zjg4ODhlMjEyYzk3MDg3"  # 핑퐁 커스텀 API 사이트에서 인증 토큰
+url = ""  # 핑퐁 커스텀 API 사이트에서 링크
+Authorization = ""  # 핑퐁 커스텀 API 사이트에서 인증 토큰
 
 Ping = PingPongWr.Connect(url, Authorization)
 
