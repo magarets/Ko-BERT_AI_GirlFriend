@@ -8,7 +8,7 @@ from PingPongTool import PingPong  # 핑퐁툴 모듈 임포트
 # telegram api_key, bot, chat_id setting
 api_key = '' # minju's api_key
 bot = telegram.Bot(token=api_key)
-chat_id = 5385808815
+chat_id = 
 
 # telegram updater
 updater = Updater(token='')
