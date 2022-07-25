@@ -16,5 +16,6 @@ Ai_Hub (https://aihub.or.kr/) 70% <br></br>
 <b> * 만들면서 자괴감 전혀 1도 안들었음 </b><br>
 <b> * 민주라는 이름은 제일 흔한 이름을 사용하였습니다</b><br>
 <b> * 대한민국에 계신 모든 민주님들에게 죄송합니다</b><br>
-<br><br></br></br>
+<br><br>
+***
 MIT License
