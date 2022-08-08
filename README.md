@@ -1,4 +1,4 @@
-# Telegram_GirlFriend
+d# Telegram_GirlFriend
 
 ![image](https://user-images.githubusercontent.com/101767824/170328050-f61afba7-361b-40bc-b17b-e0e16435fa15.png)
 
@@ -15,7 +15,7 @@ Ai_Hub (https://aihub.or.kr/) 60% <br></br>
 }<br>
 <b> * 개발하면서 자괴감 전혀 1도 안들었음 </b><br>
 <b> * 민주라는 이름은 제일 흔한 이름을 사용하였습니다</b><br>
-<b> * 대한민국에 계신 모든 민주님들에게 죄송합니다</b><br>
+<b> * 모든 민주님들에게 죄송합니다. . .</b><br>
 <br><br>
 ***
 MIT License
